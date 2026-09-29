@@ -28,8 +28,10 @@ export default defineConfig({
         {
           text: '最近文章',
           items: [
+            { text: 'LLM 兜底为什么"看似成功却返回空"', link: '/posts/llm-field-drift' },
+            { text: '飞书表格 upsert 与脏数据防御', link: '/posts/lark-upsert-dirty-data' },
             { text: '幂等防重：让 Agent 不再重复处理同一条消息', link: '/posts/agent-idempotency' },
-            { text: '从 SQLite 迁移踩坑到多账号并行：抖音监控工具工程化复盘', link: '/posts/douyin-tool-engineering' },
+            { text: '从 SQLite 迁移踩坑到多账号并行', link: '/posts/douyin-tool-engineering' },
           ],
         },
       ],
