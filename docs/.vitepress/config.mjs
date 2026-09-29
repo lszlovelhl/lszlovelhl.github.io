@@ -28,6 +28,7 @@ export default defineConfig({
         {
           text: '帧间 · 拆解与创作系统',
           items: [
+            { text: '密钥泄漏与修复：API Key 安全治理', link: '/posts/secret-hardening' },
             { text: '模型路由：业务只认"档位"不认厂商', link: '/posts/model-routing' },
             { text: '单人全栈：两台服务器怎么分工', link: '/posts/two-servers' },
             { text: '五层拆解 + 两层成稿', link: '/posts/breakdown-pipeline' },
@@ -37,10 +38,19 @@ export default defineConfig({
         {
           text: 'Agent 与工具',
           items: [
+            { text: '两个面试题项目：从面试现场到可交付', link: '/posts/projects-overview' },
+            { text: 'Docker + CI：从"能跑"到"能交付"', link: '/posts/docker-and-ci' },
+            { text: '准确率 100%：提取器评测怎么做', link: '/posts/eval-extractor' },
             { text: 'LLM 兜底为什么"看似成功却返回空"', link: '/posts/llm-field-drift' },
             { text: '飞书表格 upsert 与脏数据防御', link: '/posts/lark-upsert-dirty-data' },
             { text: '幂等防重：让 Agent 不再重复处理同一条消息', link: '/posts/agent-idempotency' },
             { text: '从 SQLite 迁移踩坑到多账号并行', link: '/posts/douyin-tool-engineering' },
+          ],
+        },
+        {
+          text: '成长与复盘',
+          items: [
+            { text: '从 Matlab 到 AI Agent：转行技术路线', link: '/posts/career-pivot' },
           ],
         },
       ],
