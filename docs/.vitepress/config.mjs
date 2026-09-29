@@ -26,7 +26,16 @@ export default defineConfig({
     sidebar: {
       '/posts/': [
         {
-          text: '最近文章',
+          text: '帧间 · 拆解与创作系统',
+          items: [
+            { text: '模型路由：业务只认"档位"不认厂商', link: '/posts/model-routing' },
+            { text: '单人全栈：两台服务器怎么分工', link: '/posts/two-servers' },
+            { text: '五层拆解 + 两层成稿', link: '/posts/breakdown-pipeline' },
+            { text: '多模态拆解管线', link: '/posts/multimodal-pipeline' },
+          ],
+        },
+        {
+          text: 'Agent 与工具',
           items: [
             { text: 'LLM 兜底为什么"看似成功却返回空"', link: '/posts/llm-field-drift' },
             { text: '飞书表格 upsert 与脏数据防御', link: '/posts/lark-upsert-dirty-data' },
