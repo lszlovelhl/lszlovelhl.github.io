@@ -1,8 +1,31 @@
+<script setup>
+import { onMounted } from 'vue'
+
+// 项目卡片滚动进入视口时播放淡入动画；IO 不可用时不阻塞内容可见
+onMounted(() => {
+  const cards = document.querySelectorAll('.hh-card')
+  if (!cards.length || !('IntersectionObserver' in window)) return
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('hh-in')
+          io.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.15 },
+  )
+  cards.forEach((card) => io.observe(card))
+})
+</script>
+
 <template>
   <section class="hh-wrap">
     <!-- 背景光晕 -->
     <div class="hh-glow hh-glow-1" aria-hidden="true"></div>
     <div class="hh-glow hh-glow-2" aria-hidden="true"></div>
+    <div class="hh-glow hh-glow-3" aria-hidden="true"></div>
 
     <div class="hh-grid">
       <!-- 左：身份区 -->
@@ -87,22 +110,29 @@
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  filter: blur(90px);
-  opacity: 0.5;
+  filter: blur(96px);
+  opacity: 0.65;
 }
 .hh-glow-1 {
-  width: 480px;
-  height: 480px;
-  top: -160px;
-  left: -120px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.35), transparent 70%);
+  width: 560px;
+  height: 560px;
+  top: -200px;
+  left: -160px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.4), transparent 70%);
 }
 .hh-glow-2 {
+  width: 520px;
+  height: 520px;
+  bottom: -180px;
+  right: -140px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.22), transparent 70%);
+}
+.hh-glow-3 {
   width: 420px;
   height: 420px;
-  bottom: -140px;
-  right: -100px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.18), transparent 70%);
+  top: 30%;
+  right: 28%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.16), transparent 70%);
 }
 
 /* ============ 网格背景 ============ */
@@ -129,10 +159,11 @@
   height: 96px;
   border-radius: 20px;
   padding: 4px;
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.55), rgba(103, 232, 249, 0.15));
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.6), rgba(103, 232, 249, 0.18));
   box-shadow:
-    0 0 0 1px rgba(34, 211, 238, 0.35),
-    0 8px 32px rgba(34, 211, 238, 0.18);
+    0 0 0 1px rgba(34, 211, 238, 0.4),
+    0 0 26px rgba(34, 211, 238, 0.22),
+    0 12px 40px rgba(2, 6, 23, 0.4);
   margin-bottom: 22px;
 }
 .hh-avatar img {
@@ -143,12 +174,23 @@
   display: block;
 }
 .hh-name {
+  position: relative;
   margin: 0 0 8px;
   font-size: 40px;
   font-weight: 700;
   color: #f8fafc;
   letter-spacing: 0.02em;
   line-height: 1.15;
+}
+/* 名字下方青色渐变装饰线 */
+.hh-name::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #22d3ee, #67e8f9, transparent);
 }
 .hh-role {
   margin: 0 0 18px;
@@ -198,6 +240,7 @@
 }
 .hh-btn-brand:hover {
   background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 100%);
+  color: #04212a;
   box-shadow: 0 6px 24px rgba(34, 211, 238, 0.35);
   transform: translateY(-1px);
 }
@@ -218,15 +261,25 @@
   animation: hh-fade-up 0.6s 0.15s ease backwards;
 }
 .hh-term {
+  position: relative;
   border-radius: 16px;
-  background: rgba(17, 27, 48, 0.55);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  backdrop-filter: blur(16px) saturate(140%);
-  border: 1px solid rgba(103, 232, 249, 0.16);
+  background: rgba(15, 23, 42, 0.5);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(103, 232, 249, 0.18);
   box-shadow:
     0 24px 60px rgba(2, 6, 23, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
+}
+/* 玻璃噪点纹理，增强材质感 */
+.hh-term::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 }
 .hh-term-bar {
   display: flex;
@@ -295,34 +348,53 @@
   gap: 20px;
 }
 .hh-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 22px 22px 24px;
   border-radius: 16px;
   text-decoration: none;
-  background: rgba(17, 27, 48, 0.45);
-  -webkit-backdrop-filter: blur(12px) saturate(130%);
-  backdrop-filter: blur(12px) saturate(130%);
-  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.42);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(148, 163, 184, 0.16);
   box-shadow:
     0 12px 32px rgba(2, 6, 23, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-  animation: hh-fade-up 0.6s 0.3s ease backwards;
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
-.hh-card:nth-child(2) { animation-delay: 0.38s; }
-.hh-card:nth-child(3) { animation-delay: 0.46s; }
+.hh-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+/* 滚动进入视口后播放淡入（由 IO 加 .hh-in 触发，不触发也可见） */
+.hh-card.hh-in {
+  animation: hh-fade-up 0.6s ease backwards;
+}
+.hh-card.hh-in:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.hh-card.hh-in:nth-child(3) {
+  animation-delay: 0.16s;
+}
 .hh-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(34, 211, 238, 0.45);
+  border-color: rgba(34, 211, 238, 0.5);
+  background: rgba(20, 31, 55, 0.5);
   box-shadow:
     0 18px 44px rgba(2, 6, 23, 0.5),
-    0 0 24px rgba(34, 211, 238, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 0 28px rgba(34, 211, 238, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 .hh-card-icon {
   font-size: 26px;
@@ -360,7 +432,7 @@
 @media (prefers-reduced-motion: reduce) {
   .hh-left,
   .hh-right,
-  .hh-card {
+  .hh-card.hh-in {
     animation: none;
   }
   .hh-cursor {
@@ -388,6 +460,10 @@
   }
   .hh-name {
     font-size: 32px;
+  }
+  .hh-name::after {
+    margin-left: auto;
+    margin-right: auto;
   }
   .hh-role {
     font-size: 16px;

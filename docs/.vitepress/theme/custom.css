@@ -68,6 +68,17 @@
     'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 }
 
+/* ---------- 玻璃导航栏（B） ---------- */
+.VPNav {
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  background-color: rgba(15, 23, 42, 0.68);
+  border-bottom: 1px solid rgba(103, 232, 249, 0.08);
+}
+.VPNavBar {
+  background: transparent;
+}
+
 /* 主页 hero 区 */
 .VPHomeHero {
   background:
