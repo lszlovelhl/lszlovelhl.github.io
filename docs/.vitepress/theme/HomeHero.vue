@@ -122,7 +122,7 @@
 
 /* ============ 左：身份区 ============ */
 .hh-left {
-  animation: hh-fade-up 0.6s ease both;
+  animation: hh-fade-up 0.6s ease backwards;
 }
 .hh-avatar {
   width: 96px;
@@ -215,7 +215,7 @@
 
 /* ============ 右：液态玻璃 terminal ============ */
 .hh-right {
-  animation: hh-fade-up 0.6s 0.15s ease both;
+  animation: hh-fade-up 0.6s 0.15s ease backwards;
 }
 .hh-term {
   border-radius: 16px;
@@ -312,7 +312,7 @@
     transform 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
-  animation: hh-fade-up 0.6s 0.3s ease both;
+  animation: hh-fade-up 0.6s 0.3s ease backwards;
 }
 .hh-card:nth-child(2) { animation-delay: 0.38s; }
 .hh-card:nth-child(3) { animation-delay: 0.46s; }
@@ -354,6 +354,19 @@
 @keyframes hh-blink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
+}
+
+/* 系统开启「减弱动态效果」时禁用入场动画，保证内容立即可见 */
+@media (prefers-reduced-motion: reduce) {
+  .hh-left,
+  .hh-right,
+  .hh-card {
+    animation: none;
+  }
+  .hh-cursor {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 /* ============ 移动端 ============ */
