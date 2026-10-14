@@ -6,7 +6,7 @@ hero:
   text: 独立全栈开发者 · AI Agent 应用开发
   tagline: 一个人开发「帧间」爆款视频拆解系统，做过抖音数据监控工具与推广申请处理 Agent。这里记录我的工程实践与踩坑。
   image:
-    src: /favicon.svg
+    src: /logo.png
     alt: 梁龙
   actions:
     - theme: brand

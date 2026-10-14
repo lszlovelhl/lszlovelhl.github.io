@@ -6,14 +6,15 @@ export default defineConfig({
   description: '独立全栈开发者 · AI Agent 应用开发 · 抖音数据监控与自动化',
   cleanUrls: true,
   lastUpdated: true,
+  appearance: false,
 
   head: [
-    ['meta', { name: 'theme-color', content: '#4f46e5' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['meta', { name: 'theme-color', content: '#0f172a' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   ],
 
   themeConfig: {
-    logo: '/favicon.svg',
+    logo: '/favicon.png',
     siteTitle: '梁龙 · 帧间',
     nav: [
       { text: '首页', link: '/' },
