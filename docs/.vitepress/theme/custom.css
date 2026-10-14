@@ -13,8 +13,8 @@
 
   /* 文字 */
   --vp-c-text-1: #e2e8f0;
-  --vp-c-text-2: #94a3b8;
-  --vp-c-text-3: #64748b;
+  --vp-c-text-2: #a5b4c8;
+  --vp-c-text-3: #8b9cb3;
 
   /* 品牌：青 */
   --vp-c-brand-1: #22d3ee;
@@ -142,6 +142,32 @@
   border: 1px solid #263449;
   border-radius: 8px;
   background: #0b1120;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* 行内代码：与正文背景区分 + 青色文字 */
+.vp-doc :not(pre) code {
+  background: #16213a;
+  border: 1px solid #263449;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #67e8f9;
+  font-size: 0.9em;
+}
+
+.vp-doc :not(pre) code::before,
+.vp-doc :not(pre) code::after {
+  content: none;
+}
+
+/* 正文：中文阅读行高 */
+.vp-doc p, .vp-doc li {
+  line-height: 1.85;
+}
+
+.vp-doc li + li {
+  margin-top: 0.25em;
 }
 
 /* 文章卡片 / 内容区 */
@@ -208,6 +234,17 @@
 
 .VPButton.alt:hover {
   background: rgba(34, 211, 238, 0.08);
+}
+
+/* 移动端 hero 图缩小，避免占满半屏 */
+@media (max-width: 640px) {
+  .VPHomeHero .image img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+  .VPHomeHero {
+    padding-top: 24px;
+  }
 }
 
 /* 橙色高亮强调 */
