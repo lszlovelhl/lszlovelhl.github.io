@@ -41,6 +41,28 @@
   /* 高亮文字 */
   --vp-c-highlight-bg: rgba(245, 158, 11, 0.16);
 
+  /* 按钮配色：走 VitePress 变量通道（组件 scoped 规则优先级更高，
+     直接写 .VPButton.alt 会被覆盖，必须在这里覆盖变量） */
+  --vp-button-brand-border: rgba(34, 211, 238, 0.6);
+  --vp-button-brand-bg: transparent;
+  --vp-button-brand-text: #06202a;
+  --vp-button-brand-hover-border: #67e8f9;
+  --vp-button-brand-hover-bg: transparent;
+  --vp-button-brand-hover-text: #06202a;
+  --vp-button-brand-active-border: #22d3ee;
+  --vp-button-brand-active-bg: transparent;
+  --vp-button-brand-active-text: #06202a;
+
+  --vp-button-alt-border: #22d3ee;
+  --vp-button-alt-bg: rgba(34, 211, 238, 0.07);
+  --vp-button-alt-text: #67e8f9;
+  --vp-button-alt-hover-border: #67e8f9;
+  --vp-button-alt-hover-bg: rgba(34, 211, 238, 0.16);
+  --vp-button-alt-hover-text: #a5f3fc;
+  --vp-button-alt-active-border: #22d3ee;
+  --vp-button-alt-active-bg: rgba(34, 211, 238, 0.12);
+  --vp-button-alt-active-text: #67e8f9;
+
   /* 字体 */
   --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC',
     'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
@@ -225,15 +247,13 @@
   background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 100%);
 }
 
-.VPButton.alt {
-  border: 1px solid #22d3ee;
-  color: #22d3ee;
-  background: transparent;
-  border-radius: 8px;
-}
+/* alt 按钮配色见 :root 的 --vp-button-alt-* 变量（组件 scoped 规则优先，
+   此处不再直接写，避免无效代码）；hover 状态由 --vp-button-alt-hover-* 覆盖 */
 
-.VPButton.alt:hover {
-  background: rgba(34, 211, 238, 0.08);
+/* hero 两个按钮等宽对齐 */
+.VPHomeHero .actions .VPButton {
+  min-width: 148px;
+  justify-content: center;
 }
 
 /* 移动端 hero 图缩小，避免占满半屏 */
