@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://lszlovelhl.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lszlovelhl.github.io/projects/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lszlovelhl.github.io/about/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/secret-hardening</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/model-routing</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/two-servers</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/breakdown-pipeline</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/multimodal-pipeline</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/projects-overview</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/docker-and-ci</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/eval-extractor</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/llm-field-drift</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/lark-upsert-dirty-data</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/agent-idempotency</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/douyin-tool-engineering</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lszlovelhl.github.io/posts/career-pivot</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+</urlset>

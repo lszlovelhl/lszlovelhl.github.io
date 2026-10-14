@@ -11,11 +11,38 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#0f172a' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
+    // Open Graph 社交分享卡片
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: '梁龙 · 帧间' }],
+    ['meta', { property: 'og:title', content: '梁龙 · 帧间 — 独立全栈开发者' }],
+    ['meta', { property: 'og:description', content: '独立全栈开发者 · AI Agent 应用开发。一个人开发「帧间」爆款视频拆解系统，做过抖音数据监控工具与推广申请处理 Agent。' }],
+    ['meta', { property: 'og:url', content: 'https://lszlovelhl.github.io/' }],
+    ['meta', { property: 'og:image', content: 'https://lszlovelhl.github.io/logo.png' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: '梁龙 · 帧间 — 独立全栈开发者' }],
+    ['meta', { name: 'twitter:description', content: '独立全栈开发者 · AI Agent 应用开发。帧间视频拆解系统、抖音数据监控工具、推广处理 Agent。' }],
+    ['meta', { name: 'twitter:image', content: 'https://lszlovelhl.github.io/logo.png' }],
   ],
 
   themeConfig: {
     logo: '/favicon.png',
     siteTitle: '梁龙 · 帧间',
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索文章', buttonAriaLabel: '搜索文章' },
+          modal: {
+            noResultsText: '未找到相关结果',
+            resetButtonTitle: '清除',
+            footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
+          },
+        },
+      },
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: '博客', link: '/posts/' },
