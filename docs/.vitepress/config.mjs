@@ -14,22 +14,22 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
     // Open Graph 社交分享卡片
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: '拾栗 · 帧间' }],
-    ['meta', { property: 'og:title', content: '拾栗 · 帧间 — 独立全栈开发者' }],
-    ['meta', { property: 'og:description', content: '独立全栈开发者 · AI Agent 应用开发。一个人开发「帧间」爆款视频拆解系统，做过抖音数据监控工具与推广申请处理 Agent。' }],
+    ['meta', { property: 'og:site_name', content: '拾栗' }],
+    ['meta', { property: 'og:title', content: '拾栗 — 独立全栈开发者' }],
+    ['meta', { property: 'og:description', content: '独立全栈开发者 · AI Agent 应用开发。做过抖音数据监控工具与推广申请处理 Agent，也折腾过视频拆解系统，记录工程实践与踩坑。' }],
     ['meta', { property: 'og:url', content: 'https://lszlovelhl.github.io/' }],
     ['meta', { property: 'og:image', content: 'https://lszlovelhl.github.io/logo.png' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: '拾栗 · 帧间 — 独立全栈开发者' }],
-    ['meta', { name: 'twitter:description', content: '独立全栈开发者 · AI Agent 应用开发。帧间视频拆解系统、抖音数据监控工具、推广处理 Agent。' }],
+    ['meta', { name: 'twitter:title', content: '拾栗 — 独立全栈开发者' }],
+    ['meta', { name: 'twitter:description', content: '独立全栈开发者 · AI Agent 应用开发。抖音数据监控工具、推广处理 Agent、视频拆解系统。' }],
     ['meta', { name: 'twitter:image', content: 'https://lszlovelhl.github.io/logo.png' }],
   ],
 
   themeConfig: {
     logo: '/favicon.png',
-    siteTitle: '拾栗 · 帧间',
+    siteTitle: '拾栗',
     search: {
       provider: 'local',
       options: {

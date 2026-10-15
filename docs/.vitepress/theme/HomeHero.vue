@@ -36,8 +36,8 @@ onMounted(() => {
         <h1 class="hh-name">拾栗</h1>
         <p class="hh-role">独立全栈开发者 · AI Agent 应用开发</p>
         <p class="hh-bio">
-          一个人开发「帧间」爆款视频拆解系统，做过抖音数据监控工具与推广申请处理 Agent。
-          这里记录我的工程实践与踩坑。
+          独立全栈开发者。做过抖音数据监控工具与推广申请处理 Agent，
+          也折腾过视频拆解系统。这里记录我的工程实践与踩坑。
         </p>
         <div class="hh-actions">
           <a class="hh-btn hh-btn-brand" href="/projects/">项目仓库</a>
@@ -52,7 +52,7 @@ onMounted(() => {
             <span class="hh-dot hh-dot-r"></span>
             <span class="hh-dot hh-dot-y"></span>
             <span class="hh-dot hh-dot-g"></span>
-            <span class="hh-term-title">zhenjian@lianglong: ~</span>
+            <span class="hh-term-title">shili@lianglong: ~</span>
           </div>
           <div class="hh-term-body">
             <div class="hh-line"><span class="hh-prompt">$</span>&nbsp;whoami</div>
@@ -74,13 +74,6 @@ onMounted(() => {
     <!-- 项目玻璃卡片 -->
     <div class="hh-features">
       <a class="hh-card" href="/projects/">
-        <span class="hh-card-icon">🎬</span>
-        <span class="hh-card-title">帧间 · 爆款视频拆解与创作系统</span>
-        <span class="hh-card-desc">
-          React + FastAPI + PostgreSQL 全栈，AI 自动拆解视频 + 元素沉淀 + 智能创作，MCN 编导效率提升。
-        </span>
-      </a>
-      <a class="hh-card" href="/projects/">
         <span class="hh-card-icon">📊</span>
         <span class="hh-card-title">抖音数据监控工具</span>
         <span class="hh-card-desc">
@@ -92,6 +85,13 @@ onMounted(() => {
         <span class="hh-card-title">推广申请处理 Agent</span>
         <span class="hh-card-desc">
           Master-Sub Agent 架构，飞书群机器人自动化「提取→校验→确认→写表」，幂等防重 + LLM 兜底，提取准确率 100%。
+        </span>
+      </a>
+      <a class="hh-card" href="/projects/">
+        <span class="hh-card-icon">🎬</span>
+        <span class="hh-card-title">视频拆解与创作系统</span>
+        <span class="hh-card-desc">
+          React + FastAPI + PostgreSQL 全栈，AI 自动拆解视频 + 元素沉淀 + 智能创作，MCN 编导效率提升。
         </span>
       </a>
     </div>
