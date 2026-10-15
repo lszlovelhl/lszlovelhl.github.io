@@ -103,46 +103,49 @@ onMounted(() => {
 .hh-wrap {
   position: relative;
   overflow: hidden;
-  padding: 64px 24px 40px;
+  padding: 88px 24px 56px;
 }
 
 .hh-glow {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  filter: blur(96px);
-  opacity: 0.65;
+  filter: blur(100px);
+  opacity: 0.75;
 }
 .hh-glow-1 {
-  width: 560px;
-  height: 560px;
-  top: -200px;
-  left: -160px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.4), transparent 70%);
+  width: 620px;
+  height: 620px;
+  top: -220px;
+  left: -180px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.45), transparent 70%);
+  animation: hh-drift 14s ease-in-out infinite alternate;
 }
 .hh-glow-2 {
-  width: 520px;
-  height: 520px;
-  bottom: -180px;
-  right: -140px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.22), transparent 70%);
+  width: 560px;
+  height: 560px;
+  bottom: -200px;
+  right: -160px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.26), transparent 70%);
+  animation: hh-drift 18s ease-in-out infinite alternate-reverse;
 }
 .hh-glow-3 {
-  width: 420px;
-  height: 420px;
-  top: 30%;
-  right: 28%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.16), transparent 70%);
+  width: 460px;
+  height: 460px;
+  top: 26%;
+  right: 24%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+  animation: hh-drift 22s ease-in-out infinite alternate;
 }
 
 /* ============ 网格背景 ============ */
 .hh-grid {
   position: relative;
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 5fr 6fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 64px;
   align-items: center;
   background-image:
     linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
@@ -152,49 +155,49 @@ onMounted(() => {
 
 /* ============ 左：身份区 ============ */
 .hh-left {
-  animation: hh-fade-up 0.6s ease backwards;
+  animation: hh-fade-up 0.7s var(--hh-spring) backwards;
 }
 .hh-avatar {
   width: 96px;
   height: 96px;
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 4px;
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.6), rgba(103, 232, 249, 0.18));
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.65), rgba(103, 232, 249, 0.2));
   box-shadow:
-    0 0 0 1px rgba(34, 211, 238, 0.4),
-    0 0 26px rgba(34, 211, 238, 0.22),
-    0 12px 40px rgba(2, 6, 23, 0.4);
-  margin-bottom: 22px;
+    0 0 0 1px rgba(34, 211, 238, 0.45),
+    0 0 30px rgba(34, 211, 238, 0.25),
+    0 16px 48px rgba(2, 6, 23, 0.45);
+  margin-bottom: 24px;
 }
 .hh-avatar img {
   width: 100%;
   height: 100%;
-  border-radius: 16px;
+  border-radius: 20px;
   object-fit: cover;
   display: block;
 }
 .hh-name {
   position: relative;
   margin: 0 0 8px;
-  font-size: 40px;
-  font-weight: 700;
+  font-size: clamp(42px, 5vw, 56px);
+  font-weight: 800;
   color: #f8fafc;
-  letter-spacing: 0.02em;
-  line-height: 1.15;
+  letter-spacing: 0.01em;
+  line-height: 1.12;
 }
 /* 名字下方青色渐变装饰线 */
 .hh-name::after {
   content: '';
   display: block;
-  width: 52px;
+  width: 56px;
   height: 4px;
-  margin-top: 10px;
+  margin-top: 12px;
   border-radius: 2px;
   background: linear-gradient(90deg, #22d3ee, #67e8f9, transparent);
 }
 .hh-role {
-  margin: 0 0 18px;
-  font-size: 18px;
+  margin: 0 0 20px;
+  font-size: 19px;
   font-weight: 600;
   line-height: 1.4;
   background: linear-gradient(120deg, #22d3ee 0%, #67e8f9 45%, #f59e0b 100%);
@@ -203,11 +206,11 @@ onMounted(() => {
   color: transparent;
 }
 .hh-bio {
-  margin: 0 0 26px;
-  font-size: 15px;
+  margin: 0 0 30px;
+  font-size: 16px;
   line-height: 1.85;
   color: #a5b4c8;
-  max-width: 460px;
+  max-width: 480px;
 }
 .hh-actions {
   display: flex;
@@ -222,16 +225,16 @@ onMounted(() => {
   justify-content: center;
   min-width: 148px;
   padding: 0 20px;
-  line-height: 40px;
+  line-height: 42px;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 21px;
   text-decoration: none;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease;
+    transform 0.3s var(--hh-spring),
+    box-shadow 0.3s var(--hh-spring),
+    background 0.3s var(--hh-spring),
+    border-color 0.3s var(--hh-spring);
 }
 .hh-btn-brand {
   background: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 100%);
@@ -241,8 +244,8 @@ onMounted(() => {
 .hh-btn-brand:hover {
   background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 100%);
   color: #04212a;
-  box-shadow: 0 6px 24px rgba(34, 211, 238, 0.35);
-  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(34, 211, 238, 0.4);
+  transform: translateY(-2px) scale(1.02);
 }
 .hh-btn-alt {
   border: 1px solid #22d3ee;
@@ -250,26 +253,28 @@ onMounted(() => {
   background: rgba(34, 211, 238, 0.07);
 }
 .hh-btn-alt:hover {
-  background: rgba(34, 211, 238, 0.16);
+  background: rgba(34, 211, 238, 0.18);
   border-color: #67e8f9;
-  box-shadow: 0 6px 24px rgba(34, 211, 238, 0.18);
-  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(34, 211, 238, 0.22);
+  transform: translateY(-2px) scale(1.02);
 }
 
 /* ============ 右：液态玻璃 terminal ============ */
 .hh-right {
-  animation: hh-fade-up 0.6s 0.15s ease backwards;
+  animation: hh-fade-up 0.7s 0.18s var(--hh-spring) backwards;
 }
 .hh-term {
   position: relative;
-  border-radius: 16px;
-  background: rgba(15, 23, 42, 0.5);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
-  backdrop-filter: blur(20px) saturate(150%);
-  border: 1px solid rgba(103, 232, 249, 0.18);
+  border-radius: 20px;
+  background: rgba(30, 41, 66, 0.42);
+  -webkit-backdrop-filter: blur(28px) saturate(170%);
+  backdrop-filter: blur(28px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow:
-    0 24px 60px rgba(2, 6, 23, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 28px 70px rgba(2, 6, 23, 0.6),
+    0 0 60px rgba(34, 211, 238, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 0 60px rgba(103, 232, 249, 0.04);
   overflow: hidden;
 }
 /* 玻璃噪点纹理，增强材质感 */
@@ -285,12 +290,12 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 16px;
-  border-bottom: 1px solid rgba(103, 232, 249, 0.12);
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .hh-dot {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
 }
 .hh-dot-r { background: #ff5f57; }
@@ -300,12 +305,12 @@ onMounted(() => {
   margin-left: 8px;
   font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
   font-size: 12px;
-  color: #8b9cb3;
+  color: #94a3b8;
 }
 .hh-term-body {
-  padding: 18px 20px 20px;
+  padding: 20px 22px 22px;
   font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.95;
 }
 .hh-line {
@@ -341,8 +346,8 @@ onMounted(() => {
 /* ============ features 玻璃卡片 ============ */
 .hh-features {
   position: relative;
-  max-width: 1080px;
-  margin: 72px auto 0;
+  max-width: 1120px;
+  margin: 80px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -352,22 +357,23 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 22px 22px 24px;
-  border-radius: 16px;
+  padding: 24px 24px 26px;
+  border-radius: 20px;
   text-decoration: none;
-  background: rgba(15, 23, 42, 0.42);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  backdrop-filter: blur(16px) saturate(140%);
-  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(30, 41, 66, 0.38);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow:
-    0 12px 32px rgba(2, 6, 23, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 16px 40px rgba(2, 6, 23, 0.4),
+    0 0 40px rgba(34, 211, 238, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
   transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+    transform 0.35s var(--hh-spring),
+    border-color 0.35s var(--hh-spring),
+    box-shadow 0.35s var(--hh-spring),
+    background 0.35s var(--hh-spring);
 }
 .hh-card::after {
   content: '';
@@ -379,44 +385,44 @@ onMounted(() => {
 }
 /* 滚动进入视口后播放淡入（由 IO 加 .hh-in 触发，不触发也可见） */
 .hh-card.hh-in {
-  animation: hh-fade-up 0.6s ease backwards;
+  animation: hh-fade-up 0.7s var(--hh-spring) backwards;
 }
 .hh-card.hh-in:nth-child(2) {
-  animation-delay: 0.08s;
+  animation-delay: 0.1s;
 }
 .hh-card.hh-in:nth-child(3) {
-  animation-delay: 0.16s;
+  animation-delay: 0.2s;
 }
 .hh-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(34, 211, 238, 0.5);
-  background: rgba(20, 31, 55, 0.5);
+  transform: translateY(-5px) scale(1.015);
+  border-color: rgba(103, 232, 249, 0.45);
+  background: rgba(38, 52, 84, 0.46);
   box-shadow:
-    0 18px 44px rgba(2, 6, 23, 0.5),
-    0 0 28px rgba(34, 211, 238, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 24px 56px rgba(2, 6, 23, 0.55),
+    0 0 40px rgba(34, 211, 238, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 .hh-card-icon {
-  font-size: 26px;
+  font-size: 28px;
   line-height: 1;
 }
 .hh-card-title {
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 600;
   color: #e2e8f0;
   line-height: 1.45;
 }
 .hh-card-desc {
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.75;
-  color: #8b9cb3;
+  color: #94a3b8;
 }
 
 /* ============ 动画 ============ */
 @keyframes hh-fade-up {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -427,12 +433,18 @@ onMounted(() => {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
 }
+/* 背景光晕缓慢浮动 */
+@keyframes hh-drift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(24px, 18px); }
+}
 
 /* 系统开启「减弱动态效果」时禁用入场动画，保证内容立即可见 */
 @media (prefers-reduced-motion: reduce) {
   .hh-left,
   .hh-right,
-  .hh-card.hh-in {
+  .hh-card.hh-in,
+  .hh-glow {
     animation: none;
   }
   .hh-cursor {
@@ -444,22 +456,22 @@ onMounted(() => {
 /* ============ 移动端 ============ */
 @media (max-width: 768px) {
   .hh-wrap {
-    padding: 36px 20px 32px;
+    padding: 44px 20px 36px;
   }
   .hh-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
   }
   .hh-left {
     text-align: center;
   }
   .hh-avatar {
-    width: 84px;
-    height: 84px;
-    margin: 0 auto 18px;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 20px;
   }
   .hh-name {
-    font-size: 32px;
+    font-size: clamp(32px, 8vw, 40px);
   }
   .hh-name::after {
     margin-left: auto;
@@ -471,6 +483,7 @@ onMounted(() => {
   .hh-bio {
     margin-left: auto;
     margin-right: auto;
+    font-size: 15px;
   }
   .hh-actions {
     justify-content: center;
@@ -484,7 +497,7 @@ onMounted(() => {
   .hh-features {
     grid-template-columns: 1fr;
     gap: 14px;
-    margin-top: 44px;
+    margin-top: 48px;
   }
 }
 </style>
