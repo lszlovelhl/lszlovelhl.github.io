@@ -90,7 +90,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '独立开发 · 梁龙科技',
+      message: '独立开发 · 梁龙拾栗科技有限公司',
       copyright: '© 2026 lszlovelhl',
     },
 
