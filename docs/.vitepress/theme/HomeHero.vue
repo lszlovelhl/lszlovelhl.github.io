@@ -118,7 +118,7 @@ onMounted(() => {
   height: 620px;
   top: -220px;
   left: -180px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.45), transparent 70%);
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.4), transparent 70%);
   animation: hh-drift 14s ease-in-out infinite alternate;
 }
 .hh-glow-2 {
@@ -126,7 +126,7 @@ onMounted(() => {
   height: 560px;
   bottom: -200px;
   right: -160px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.26), transparent 70%);
+  background: radial-gradient(circle, rgba(180, 83, 9, 0.22), transparent 70%);
   animation: hh-drift 18s ease-in-out infinite alternate-reverse;
 }
 .hh-glow-3 {
@@ -134,7 +134,7 @@ onMounted(() => {
   height: 460px;
   top: 26%;
   right: 24%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent 70%);
   animation: hh-drift 22s ease-in-out infinite alternate;
 }
 
@@ -148,8 +148,8 @@ onMounted(() => {
   gap: 64px;
   align-items: center;
   background-image:
-    linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(180, 83, 9, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 83, 9, 0.06) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -162,11 +162,11 @@ onMounted(() => {
   height: 96px;
   border-radius: 24px;
   padding: 4px;
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.65), rgba(103, 232, 249, 0.2));
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.7), rgba(245, 158, 11, 0.25));
   box-shadow:
-    0 0 0 1px rgba(34, 211, 238, 0.45),
-    0 0 30px rgba(34, 211, 238, 0.25),
-    0 16px 48px rgba(2, 6, 23, 0.45);
+    0 0 0 1px rgba(180, 83, 9, 0.45),
+    0 0 30px rgba(217, 119, 6, 0.22),
+    0 16px 48px rgba(120, 113, 108, 0.25);
   margin-bottom: 24px;
 }
 .hh-avatar img {
@@ -181,11 +181,11 @@ onMounted(() => {
   margin: 0 0 8px;
   font-size: clamp(42px, 5vw, 56px);
   font-weight: 800;
-  color: #f8fafc;
+  color: #1c1917;
   letter-spacing: 0.01em;
   line-height: 1.12;
 }
-/* 名字下方青色渐变装饰线 */
+/* 名字下方金黄渐变装饰线 */
 .hh-name::after {
   content: '';
   display: block;
@@ -193,14 +193,14 @@ onMounted(() => {
   height: 4px;
   margin-top: 12px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #22d3ee, #67e8f9, transparent);
+  background: linear-gradient(90deg, #b45309, #f59e0b, transparent);
 }
 .hh-role {
   margin: 0 0 20px;
   font-size: 19px;
   font-weight: 600;
   line-height: 1.4;
-  background: linear-gradient(120deg, #22d3ee 0%, #67e8f9 45%, #f59e0b 100%);
+  background: linear-gradient(120deg, #b45309 0%, #d97706 45%, #f59e0b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -209,7 +209,7 @@ onMounted(() => {
   margin: 0 0 30px;
   font-size: 16px;
   line-height: 1.85;
-  color: #a5b4c8;
+  color: #57534e;
   max-width: 480px;
 }
 .hh-actions {
@@ -237,25 +237,25 @@ onMounted(() => {
     border-color 0.3s var(--hh-spring);
 }
 .hh-btn-brand {
-  background: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 100%);
-  color: #06202a;
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  color: #ffffff;
   border: 1px solid transparent;
 }
 .hh-btn-brand:hover {
-  background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 100%);
-  color: #04212a;
-  box-shadow: 0 8px 28px rgba(34, 211, 238, 0.4);
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 28px rgba(217, 119, 6, 0.4);
   transform: translateY(-2px) scale(1.02);
 }
 .hh-btn-alt {
-  border: 1px solid #22d3ee;
-  color: #67e8f9;
-  background: rgba(34, 211, 238, 0.07);
+  border: 1px solid #b45309;
+  color: #92400e;
+  background: rgba(180, 83, 9, 0.06);
 }
 .hh-btn-alt:hover {
-  background: rgba(34, 211, 238, 0.18);
-  border-color: #67e8f9;
-  box-shadow: 0 8px 28px rgba(34, 211, 238, 0.22);
+  background: rgba(180, 83, 9, 0.14);
+  border-color: #d97706;
+  box-shadow: 0 8px 28px rgba(217, 119, 6, 0.2);
   transform: translateY(-2px) scale(1.02);
 }
 
@@ -266,15 +266,14 @@ onMounted(() => {
 .hh-term {
   position: relative;
   border-radius: 20px;
-  background: rgba(30, 41, 66, 0.42);
+  background: #201c18;
   -webkit-backdrop-filter: blur(28px) saturate(170%);
   backdrop-filter: blur(28px) saturate(170%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 28px 70px rgba(2, 6, 23, 0.6),
-    0 0 60px rgba(34, 211, 238, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    inset 0 0 60px rgba(103, 232, 249, 0.04);
+    0 28px 70px rgba(120, 113, 108, 0.35),
+    0 0 60px rgba(217, 119, 6, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
   overflow: hidden;
 }
 /* 玻璃噪点纹理，增强材质感 */
@@ -305,7 +304,7 @@ onMounted(() => {
   margin-left: 8px;
   font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
   font-size: 12px;
-  color: #94a3b8;
+  color: #a8a29e;
 }
 .hh-term-body {
   padding: 20px 22px 22px;
@@ -315,23 +314,23 @@ onMounted(() => {
 }
 .hh-line {
   white-space: nowrap;
-  color: #67e8f9;
+  color: #d6d3d1;
 }
 .hh-out {
-  color: #cbd5e1;
+  color: #a8a29e;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .hh-prompt {
-  color: #22d3ee;
+  color: #f59e0b;
   font-weight: 700;
 }
 .hh-accent {
-  color: #67e8f9;
+  color: #fbbf24;
 }
 .hh-warn {
-  color: #f59e0b;
+  color: #fb923c;
 }
 .hh-cursor {
   display: inline-block;
@@ -339,7 +338,7 @@ onMounted(() => {
   height: 16px;
   margin-left: 2px;
   vertical-align: -2px;
-  background: #67e8f9;
+  background: #f59e0b;
   animation: hh-blink 1.1s steps(2, start) infinite;
 }
 
@@ -360,14 +359,14 @@ onMounted(() => {
   padding: 24px 24px 26px;
   border-radius: 20px;
   text-decoration: none;
-  background: rgba(30, 41, 66, 0.38);
+  background: rgba(255, 255, 255, 0.55);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
   backdrop-filter: blur(24px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(120, 113, 108, 0.16);
   box-shadow:
-    0 16px 40px rgba(2, 6, 23, 0.4),
-    0 0 40px rgba(34, 211, 238, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 16px 40px rgba(120, 113, 108, 0.14),
+    0 0 40px rgba(217, 119, 6, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   overflow: hidden;
   transition:
     transform 0.35s var(--hh-spring),
@@ -395,12 +394,12 @@ onMounted(() => {
 }
 .hh-card:hover {
   transform: translateY(-5px) scale(1.015);
-  border-color: rgba(103, 232, 249, 0.45);
-  background: rgba(38, 52, 84, 0.46);
+  border-color: rgba(217, 119, 6, 0.5);
+  background: rgba(255, 255, 255, 0.72);
   box-shadow:
-    0 24px 56px rgba(2, 6, 23, 0.55),
-    0 0 40px rgba(34, 211, 238, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    0 24px 56px rgba(120, 113, 108, 0.2),
+    0 0 40px rgba(217, 119, 6, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 .hh-card-icon {
   font-size: 28px;
@@ -409,13 +408,13 @@ onMounted(() => {
 .hh-card-title {
   font-size: 15.5px;
   font-weight: 600;
-  color: #e2e8f0;
+  color: #292524;
   line-height: 1.45;
 }
 .hh-card-desc {
   font-size: 13.5px;
   line-height: 1.75;
-  color: #94a3b8;
+  color: #57534e;
 }
 
 /* ============ 动画 ============ */

@@ -9,7 +9,7 @@ export default defineConfig({
   appearance: false,
 
   head: [
-    ['meta', { name: 'theme-color', content: '#0f172a' }],
+    ['meta', { name: 'theme-color', content: '#faf6ee' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
     // Open Graph 社交分享卡片
