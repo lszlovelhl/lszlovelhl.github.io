@@ -31,9 +31,9 @@ onMounted(() => {
       <!-- 左：身份区 -->
       <div class="hh-left">
         <div class="hh-avatar">
-          <img src="/logo.png" alt="梁龙" />
+          <img src="/logo.png" alt="拾栗" />
         </div>
-        <h1 class="hh-name">梁龙</h1>
+        <h1 class="hh-name">拾栗</h1>
         <p class="hh-role">独立全栈开发者 · AI Agent 应用开发</p>
         <p class="hh-bio">
           一个人开发「帧间」爆款视频拆解系统，做过抖音数据监控工具与推广申请处理 Agent。
@@ -56,7 +56,7 @@ onMounted(() => {
           </div>
           <div class="hh-term-body">
             <div class="hh-line"><span class="hh-prompt">$</span>&nbsp;whoami</div>
-            <div class="hh-line hh-out">梁龙 · 独立全栈开发者 · 单人作战</div>
+            <div class="hh-line hh-out">拾栗 · 独立全栈开发者 · 单人作战</div>
             <div class="hh-line"><span class="hh-prompt">$</span>&nbsp;ls&nbsp;~/projects</div>
             <div class="hh-line hh-out"><span class="hh-accent">帧间</span>&nbsp;&nbsp;爆款视频拆解与创作系统</div>
             <div class="hh-line hh-out"><span class="hh-accent">douyin-monitor</span>&nbsp;&nbsp;抖音数据监控工具</div>

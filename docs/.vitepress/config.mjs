@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: '梁龙',
-  description: '独立全栈开发者 · AI Agent 应用开发 · 抖音数据监控与自动化',
+  title: '拾栗',
+  description: '拾栗 · 独立全栈开发者 · AI Agent 应用开发 · 抖音数据监控与自动化',
   cleanUrls: true,
   lastUpdated: true,
   appearance: false,
@@ -14,22 +14,22 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
     // Open Graph 社交分享卡片
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: '梁龙 · 帧间' }],
-    ['meta', { property: 'og:title', content: '梁龙 · 帧间 — 独立全栈开发者' }],
+    ['meta', { property: 'og:site_name', content: '拾栗 · 帧间' }],
+    ['meta', { property: 'og:title', content: '拾栗 · 帧间 — 独立全栈开发者' }],
     ['meta', { property: 'og:description', content: '独立全栈开发者 · AI Agent 应用开发。一个人开发「帧间」爆款视频拆解系统，做过抖音数据监控工具与推广申请处理 Agent。' }],
     ['meta', { property: 'og:url', content: 'https://lszlovelhl.github.io/' }],
     ['meta', { property: 'og:image', content: 'https://lszlovelhl.github.io/logo.png' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: '梁龙 · 帧间 — 独立全栈开发者' }],
+    ['meta', { name: 'twitter:title', content: '拾栗 · 帧间 — 独立全栈开发者' }],
     ['meta', { name: 'twitter:description', content: '独立全栈开发者 · AI Agent 应用开发。帧间视频拆解系统、抖音数据监控工具、推广处理 Agent。' }],
     ['meta', { name: 'twitter:image', content: 'https://lszlovelhl.github.io/logo.png' }],
   ],
 
   themeConfig: {
     logo: '/favicon.png',
-    siteTitle: '梁龙 · 帧间',
+    siteTitle: '拾栗 · 帧间',
     search: {
       provider: 'local',
       options: {
