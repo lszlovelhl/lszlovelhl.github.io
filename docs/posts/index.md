@@ -4,6 +4,17 @@
 
 ## 最近文章
 
+### 拾栗手记
+
+- [给博客换新装：从深蓝冷色到暖纸风的一周](./blog-redesign)
+- [为什么我把 logo 从"大 L"换成了手绘板栗](./chestnut-logo)
+- [一个人怎么活成一支团队：独立开发者工具链](./solo-toolchain)
+- [大模型 API 成本控制实战：从免费档到按量付费](./llm-cost-control)
+- [让 Agent 学会"重试"：幂等、退避与故障恢复](./agent-retry)
+- [从爬虫到 AI Agent 开发者的转型路线图](./crawler-to-agent)
+- [抖音数据监控工具：从爬虫到告警的完整工程](./douyin-monitor)
+- [单人维护 GitHub Pages + VitePress 的 CI/CD 心法](./ghpages-vitepress)
+
 ### 帧间 · 爆款视频拆解与创作系统
 
 - [密钥泄漏与修复：一次 API Key 安全治理实录](./secret-hardening)

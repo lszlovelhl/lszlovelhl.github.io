@@ -57,6 +57,19 @@ export default defineConfig({
     sidebar: {
       '/posts/': [
         {
+          text: '拾栗手记',
+          items: [
+            { text: '给博客换新装：从深蓝冷色到暖纸风的一周', link: '/posts/blog-redesign' },
+            { text: '为什么我把 logo 从"大 L"换成了手绘板栗', link: '/posts/chestnut-logo' },
+            { text: '一个人怎么活成一支团队：独立开发者工具链', link: '/posts/solo-toolchain' },
+            { text: '大模型 API 成本控制实战：从免费档到按量付费', link: '/posts/llm-cost-control' },
+            { text: '让 Agent 学会"重试"：幂等、退避与故障恢复', link: '/posts/agent-retry' },
+            { text: '从爬虫到 AI Agent 开发者的转型路线图', link: '/posts/crawler-to-agent' },
+            { text: '抖音数据监控工具：从爬虫到告警的完整工程', link: '/posts/douyin-monitor' },
+            { text: '单人维护 GitHub Pages + VitePress 的 CI/CD 心法', link: '/posts/ghpages-vitepress' },
+          ],
+        },
+        {
           text: '帧间 · 拆解与创作系统',
           items: [
             { text: '密钥泄漏与修复：API Key 安全治理', link: '/posts/secret-hardening' },
